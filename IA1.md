@@ -4,7 +4,7 @@
   - Experiência
   - Amostra
 ## Raciocínio (A, C)
-  ## } Motor 
+  - ### } Motor
     - Força bruta
       - Amplitude
       - Profundidade
@@ -43,3 +43,4 @@ public boolean metodo1(){
   catch
 }
 ```
+

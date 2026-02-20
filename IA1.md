@@ -33,7 +33,9 @@ D) Redes Neurais -> Reconhecimento, Diagnóstico
 ## Restrição
 
 método1() -> restrição = validação = tratamento de exceção
+
 método2()
+
 método3()
 
 ```java
@@ -43,5 +45,6 @@ public boolean metodo1(){
   catch
 }
 ```
+
 
 

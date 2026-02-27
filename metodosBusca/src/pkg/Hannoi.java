@@ -1,14 +1,15 @@
 import java.util.LinkedList;
 import java.util.List;
 
+import java.util.HashSet;
+import java.util.Stack;
+import javax.swing.JOptionPane;
+
 import busca.BuscaLargura;
 import busca.BuscaProfundidade;
 import busca.Estado;
 import busca.MostraStatusConsole;
 import busca.Nodo;
-import java.util.HashSet;
-import java.util.Stack;
-import javax.swing.JOptionPane;
 
 public class Hannoi implements Estado {
     
@@ -51,17 +52,12 @@ public class Hannoi implements Estado {
     @Override
     public List<Estado> sucessores() {
         List<Estado> visitados = new LinkedList<Estado>(); // a lista de sucessores
-        HashSet<Estado> visitadosTemp = new HashSet<>();
         
-        moverTorre1_Torre2(visitadosTemp);
-        moverTorre1_Torre3(visitadosTemp);
-        moverTorre2_Torre1(visitadosTemp);
-        moverTorre2_Torre3(visitadosTemp);
-        moverTorre3_Torre1(visitadosTemp);
-        moverTorre3_Torre2(visitadosTemp);
-        
-        visitados.clear();
-        visitados.addAll(visitadosTemp);
+        moverTorre1_Torre2(visitados);
+        moverTorre1_Torre3(visitados);
+        moverTorre2_Torre3(visitados);
+        moverTorre3_Torre1(visitados);
+        moverTorre3_Torre2(visitados);
         
         return visitados;
     }
@@ -75,69 +71,81 @@ public class Hannoi implements Estado {
         return true;
     }
     
-    private void moverTorre1_Torre2(HashSet<Estado> visitados) {
+    private void moverTorre1_Torre2(List<Estado> visitados) {
         Stack origem = (Stack)this.torre1.clone();
         Stack destino = (Stack)this.torre2.clone();
         
         if (ehValido(origem, destino)){
             destino.push(origem.pop());
             Hannoi novo = new Hannoi(origem, destino, (Stack)this.torre3.clone(), "Movendo torre1 para torre2");
-            visitados.add(novo);
+            if (!visitados.contains(novo)){
+                visitados.add(novo);
+            }
         }
     }
     
-    private void moverTorre1_Torre3(HashSet<Estado> visitados) {
+    private void moverTorre1_Torre3(List<Estado> visitados) {
         Stack origem = (Stack)this.torre1.clone();
         Stack destino = (Stack)this.torre3.clone();
         
         if (ehValido(origem, destino)){
             destino.push(origem.pop());
             Hannoi novo = new Hannoi(origem, (Stack)this.torre2.clone(), destino, "Movendo torre1 para torre3");
-            visitados.add(novo);
+            if (!visitados.contains(novo)){
+                visitados.add(novo);
+            }
         }
     }
     
-    private void moverTorre2_Torre1(HashSet<Estado> visitados) {
+    private void moverTorre2_Torre1(List<Estado> visitados) {
         Stack origem = (Stack)this.torre2.clone();
         Stack destino = (Stack)this.torre1.clone();
         
         if (ehValido(origem, destino)){
             destino.push(origem.pop());
             Hannoi novo = new Hannoi(destino, origem, (Stack)this.torre3.clone(), "Movendo torre2 para torre1");
-            visitados.add(novo);
+            if (!visitados.contains(novo)){
+                visitados.add(novo);
+            }
         }
     }
     
-    private void moverTorre2_Torre3(HashSet<Estado> visitados) {
+    private void moverTorre2_Torre3(List<Estado> visitados) {
         Stack origem = (Stack)this.torre2.clone();
         Stack destino = (Stack)this.torre3.clone();
         
         if (ehValido(origem, destino)){
             destino.push(origem.pop());
             Hannoi novo = new Hannoi((Stack)this.torre1.clone(), origem, destino, "Movendo torre2 para torre3");
-            visitados.add(novo);
+            if (!visitados.contains(novo)){
+                visitados.add(novo);
+            }
         }
     }
     
-    private void moverTorre3_Torre1(HashSet<Estado> visitados) {
+    private void moverTorre3_Torre1(List<Estado> visitados) {
         Stack origem = (Stack)this.torre3.clone();
         Stack destino = (Stack)this.torre1.clone();
         
         if (ehValido(origem, destino)){
             destino.push(origem.pop());
             Hannoi novo = new Hannoi(destino, (Stack)this.torre2.clone(), origem, "Movendo torre3 para torre1");
-            visitados.add(novo);
+            if (!visitados.contains(novo)){
+                visitados.add(novo);
+            }
         }
     }
     
-    private void moverTorre3_Torre2(HashSet<Estado> visitados) {
+    private void moverTorre3_Torre2(List<Estado> visitados) {
         Stack origem = (Stack)this.torre3.clone();
         Stack destino = (Stack)this.torre2.clone();
         
         if (ehValido(origem, destino)){
             destino.push(origem.pop());
             Hannoi novo = new Hannoi((Stack)this.torre1.clone(), destino, origem, "Movendo torre3 para torre2");
-            visitados.add(novo);
+            if (!visitados.contains(novo)){
+                visitados.add(novo);
+            }
         }
     }
     /**

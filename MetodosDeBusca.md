@@ -5,6 +5,7 @@
     - Pilha (Recursiva S.O)
     - Visitados
   - Largura/amplitude
+  - 
     **Árvore completa**:
     - Fila
     - Visitados
@@ -13,6 +14,7 @@
   - Heurística ou informação
     - Custo Real - g(n)
     - Custo Estimado/Heurístico - h(n)
+  - 
   **Visitados**:
   - Subida de encosta/montanha - Climb Hill
     - Profundidade -> Pilha recursiva
@@ -22,4 +24,4 @@
     - Custo Estimado
   - A*
     - Amplitude -> FIla
-    - Combinação = Custo real (corrigido) e Custo estimado
+    - Combinação = Custo real (acumulado) e Custo estimado

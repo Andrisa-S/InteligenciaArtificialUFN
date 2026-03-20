@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="buscaJava">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/buscaJava.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,7 +1,10 @@
 # Computação Evolutiva: Algoritmos Genéticos (AG)
-- Método de busca turbinado heurístico dinâmico
+- Método de busca heurístico dinâmico, 'turbinado' com aleatoriedade controlada... maior chute da paróquia
 - Gerar e testar, N
-- Teoria da Evolução Genética
+- Tipo de problema com muitas restrições (ifs) e sem o conhecimento de estado final
+- Produz estados como os métodos de busca tradicionais, entretanto, a produção/geração não é linear, mas sim paralelo (como se fosse um vetor/lista)... a cada geraçção um AG pode produzir/gerar N estados novos
+- Teoria da Evolução Genética - Charles Darwin
+  - Método de Seleção Natural (os mais aptos ou os mais perto da solução ou os com menos restrições feridas irão passar para a próxima geração)
 
 ## Contexto
 - Área da IA inspirada na:
@@ -35,5 +38,6 @@
 ## Fluxograma básico
 <img width="735" height="431" alt="image" src="https://github.com/user-attachments/assets/893130ee-af9c-444f-b8ba-fc78f9692b0e" />
 
+### Exemplo - https://rednuht.org/genetic_cars_2/
 
 

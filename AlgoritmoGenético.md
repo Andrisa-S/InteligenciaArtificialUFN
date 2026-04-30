@@ -1,6 +1,10 @@
 # Computação Evolutiva: Algoritmos Genéticos (AG)
 - Método de busca heurístico dinâmico, 'turbinado' com aleatoriedade controlada... maior chute da paróquia
 - Gerar e testar, N
+- Cálculo de aptidão (fitness)
+- Problemas de **alta complexidade** (esforço)
+  - Muitas restrições;
+  - Heurística.
 - Tipo de problema com muitas restrições (ifs) e sem o conhecimento de estado final
 - Produz estados como os métodos de busca tradicionais, entretanto, a produção/geração não é linear, mas sim paralelo (como se fosse um vetor/lista)... a cada geraçção um AG pode produzir/gerar N estados novos
 - Teoria da Evolução Genética - Charles Darwin

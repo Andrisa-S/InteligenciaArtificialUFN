@@ -121,6 +121,7 @@ public class Principal {
 
             torneio.clear();
         } while (i < quantidadeSorteada);
+        System.out.println(torneio);
     }
 
     public static void reproduzirRotas(List<Cromossomo> rota, List<Cromossomo> novaRota, int quantidadeReproduzida, Mapa mapa) {
@@ -182,16 +183,17 @@ public class Principal {
         List<Cromossomo> rota = new LinkedList<>();
         List<Cromossomo> novaRota = new LinkedList<>();
 
-        int tamanhoRota = 100;
-        int quantidadeSelecionada = 50;
+        int tamanhoRota = 10;
+        int quantidadeSelecionada = 5;
         int quantidadeReproduzida = 30;
 
         gerarRota(rota, tamanhoRota, mapa);
-        System.out.println("Rota gerada:");
+        System.out.println("Rotas gerada:");
         exibirRota(rota);
-        ordenarRota(rota);
-        System.out.println("\nRota ordenada:");
-        exibirRota(rota);
+
+        selecionarRotaRoleta(rota, novaRota, quantidadeSelecionada);
+        System.out.println("\nRotas roleta:");
+        exibirRota(novaRota);
 
     }
 

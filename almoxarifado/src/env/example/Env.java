@@ -11,6 +11,7 @@ import java.util.logging.*;
 
 public class Env extends Environment {
 
+    String peca;
     private Logger logger = Logger.getLogger("almoxarifado."+Env.class.getName());
 
     String sorteiaPeca() {
@@ -36,6 +37,7 @@ public class Env extends Environment {
     @Override
     public void init(String[] args) {
         super.init(args);
+        peca = "peca(grd)"; //sorteia peca
         try {
             String peca = sorteiaPeca();
             addPercept(ASSyntax.parseLiteral(peca));
@@ -48,9 +50,21 @@ public class Env extends Environment {
     @Override
     public boolean executeAction(String agName, Structure action) {
         logger.info(agName + "está solicitando a ação: " + action.getFunctor());
-        if (true) { 
+        if (agName.equals("r1") && action.getFunctor().toString().equals("guardar") && action.getTerm(0).toString().equals("peq")) { 
+           logger.info(agName + "está guardando a peça " + action.getTerm(0).toString());
             informAgsEnvironmentChanged(); // if the action changes the environment, inform the agents that are subscribed to environment changes
-        } else logger.info("executando a ação: " + action + " com falha");
+        } else logger.info("executando a ação: " + action + " sem implementação");
+        
+        try {
+            removePercept(ASSyntax.parseLiteral(peca));
+
+            Thread.sleep(4000);
+            peca = "peca(peq)"; //sorteiaPeca()
+            addPercept(ASSyntax.parseLiteral(peca));
+        } catch (ParseException | InterruptedException e) {
+            // TODO Auto-generated catch block
+        }
+        
         return true; // the action was executed with success
     }
 

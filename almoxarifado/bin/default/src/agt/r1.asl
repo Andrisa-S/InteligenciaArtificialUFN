@@ -1,8 +1,8 @@
-// Agent robo2 in project almoxarifado
+// Agent robo1 in project almoxarifado
 
 /* Initial beliefs and rules */
-viagens(r2, 10).
-guarda(med).
+viagens(5).
+guarda(peq).
 
 /* Initial goals */
 
@@ -10,21 +10,17 @@ guarda(med).
 
 +!start : true
     <-
-        ?viagens(r2, Qtd);
+        ?viagens(Qtd);
         ?guarda(Peca);
         .print("Sou responsável pelas peças ", Peca, " e tenho ", Qtd, " viagens").
 
-+peca(Peca) : viagens(r2, Qtd) & Qtd > 0 & guarda(Peca)
++peca(Peca) : viagens(Qtd) & Qtd > 0 & guarda(Peca)
     <-
         .print("Percebi uma peça ", Peca, " e vou guardá-la");
-        guardar(Peca);
-        -viagens(r2, Qtd);
-        NovoQtd = Qtd - 1;
-        +viagens(r2, NovoQtd).
+        guardar(Peca).
 
 +peca(Peca) : guarda(Peca)
     <-
         .print("Percebi uma peça ", Peca, " mas não tenho mais como guarda peças").
 
-/* Plans */
 

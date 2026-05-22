@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/io.github.jason-lang/jason-interpreter/3.3.0/3c0fae64839e6566abeb9ed42ab63255e570f972/jason-interpreter-3.3.0.jar" sourcepath="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/io.github.jason-lang/jason-interpreter/3.3.0/7803e7f8346d1ddeb0fcc5a0baf100aaa131a4bd/jason-interpreter-3.3.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/net.sf.ingenias/jade/4.3/2cf02ba26058230c72da969100a3c2e2e7f06628/jade-4.3.jar" sourcepath="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/net.sf.ingenias/jade/4.3/5bcf99e05d16da9a885533d3a24fd74e10f1696d/jade-4.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.1.4/c8efa3cfaeee2b05c2dfd54cba21548a081b1746/javax.json-api-1.1.4.jar" sourcepath="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.1.4/eb81279e894e71bf034681c5494c60001775bb0/javax.json-api-1.1.4-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.1.4/943f240a509d3c70b448a55c6735591ecbd37c88/javax.json-1.1.4.jar" sourcepath="C:/Users/laboratorio/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.1.4/c8718c73685d7d4915905c14ef650c7ca4f5d97e/javax.json-1.1.4-sources.jar"/>
+	<classpathentry kind="output" path="bin/default"/>
+</classpath>

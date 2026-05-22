@@ -1,0 +1,24 @@
+/*
+    almoxarifado
+
+
+    ---------------------------
+
+    mas2j - projeto
+    asl - cabeça do agente: crença e planos
+    java - SIMULAÇÃO: addPercept, removePercept, executePercept...
+
+    Jason Application File
+
+    Jason 3.3.0
+*/
+
+MAS almoxarifado {
+
+    environment: example.Env(10)
+
+    agents: r1;
+            r2;
+
+    aslSourcePath: "src/agt";
+}
